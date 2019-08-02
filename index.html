@@ -7,19 +7,42 @@
 
 <body>
   <nav id="navbar">
-    <ul id="nav-list">
-      <li><a href="#welcome-section">About</a></li>
+    <ul class="nav-list">
+      <li><a href="#welcome-section">Welcome</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#footer">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
   <main>
-      <!-- https://github.com/techCarpenter -->
+    <!-- https://github.com/techCarpenter -->
     <section id="welcome-section">
-      <h1 id="welcome-section-header">I'm Brian DeVries</h1>
-      <p id="welcome-paragraph">Welcome to my portfolio</p>
+      <h1 class="welcome-section-header">I'm Brian DeVries</h1>
+      <p class="welcome-paragraph">Welcome to my site!</p>
     </section>
     <section id="projects">
+      <div class="project-main">
+        <h1 id="project-header">Some of my work:</h1>
+        <div class="project-container">
+          <a href="" target="_blank" class="project-tile">
+            <img src="" alt="">
+            <p></p>
+          </a>
+          <a href="" target="_blank" class="project-tile">
+            <img src="" alt="">
+            <p></p>
+          </a>
+          <a href="" target="_blank" class="project-tile">
+            <img src="" alt="">
+            <p></p>
+          </a>
+          <a href="" target="_blank" class="project-tile">
+            <img src="" alt="">
+            <p></p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
 
     </section>
   </main>
@@ -35,22 +58,27 @@
     --main-blue: #3123ff;
     --main-orange: #45b681;
   }
+
   /* ===== Attributes ===== */
+  h1 {
+    margin-bottom: 10px;
+  }
+
   body {
     margin: 0;
     padding: 0;
   }
+
   a {
     color: var(--main-white);
     text-decoration: none;
   }
+
+  #navbar a:hover {
+    background-color: blue;
+  }
+
   /* ===== IDs ===== */
-  #welcome-section-header {
-    font-size: 72px;
-  }
-  #welcome-paragraph {
-    font-size: 18px;
-  }
   #navbar {
     justify-content: flex-end;
     background-color: var(--main-blue);
@@ -59,19 +87,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    z-index: 999;
   }
-  #nav-list {
-    padding: 0 20px;
-    list-style: none;
-    display: flex;
-    align-content: center;
-  }
-  #nav-list > li {
-    text-align: center;
-    width: 100px;
-    font-size: 18px;
-  }
+
   #welcome-section {
     display: flex;
     flex-direction: column;
@@ -79,17 +97,64 @@
     justify-content: center;
     text-align: center;
     height: 100vh;
-    background-color: var(--main-black);
-    /* background-image: linear-gradient(to right, rgba(0,0,0,0.8), black); */
+    color: var(--main-black);
+    background-color: var(--main-white);
   }
+
+  #projects {
+    min-height: 100vh;
+    background-color: var(--main-black);
+    color: var(--main-white);
+  }
+
+  #project-header {
+    font-size: 36px;
+    text-align: center;
+  }
+
   /* ===== Classes ===== */
-  .project-tile {
-    width: 16vw;
-    height: 12vw;
-    min-height: 300px;
-    min-width: 400px;
+  .welcome-section-header {
+    font-size: 72px;
+  }
+
+  .welcome-paragraph {
+    font-size: 24px;
+  }
+
+  .nav-list {
+    display: flex;
+    height: 100%;
+    list-style: none;
+    margin: 0;
     padding: 0;
   }
+
+  .nav-list a {
+    display: block;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .project-tile {
+    width: 100%;
+    height: 300px;
+  }
+
+  .project-tile img {
+    width: 100%;
+    height: calc(100% - 30px);
+  }
+
+  .project-main {
+    padding: 100px;
+  }
+
   /* ===== Media Queries ===== */
 </style>
 
