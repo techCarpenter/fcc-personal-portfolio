@@ -10,7 +10,7 @@
     <ul class="nav-list">
       <li><a href="#welcome-section">Welcome</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#connect">Connect</a></li>
     </ul>
   </nav>
   <main>
@@ -23,27 +23,50 @@
       <div class="project-main">
         <h1 id="project-header">Some of my work:</h1>
         <div class="project-container">
-          <a href="" target="_blank" class="project-tile">
-            <img src="" alt="">
-            <p></p>
+          <a href="https://techcarpenter.github.io/tributepage" target="_blank" class="project-tile">
+            <img
+              src="https://shrinktheweb.snapito.io/v2/webshot/spu-ea68c8-ogi2-3cwn3bmfojjlb56e?size=mc&screen=1024x768&url=https%3A%2F%2Ftechcarpenter.github.io%2Ftributepage%2F"
+              alt="">
+            <div>
+              <p>Tribute Page</p>
+            </div>
           </a>
-          <a href="" target="_blank" class="project-tile">
-            <img src="" alt="">
-            <p></p>
+          <a href="https://techcarpenter.github.io/surveyform" target="_blank" class="project-tile">
+            <img
+              src="https://shrinktheweb.snapito.io/v2/webshot/spu-ea68c8-ogi2-3cwn3bmfojjlb56e?size=mc&screen=1024x768&url=http%3A%2F%2Ftechcarpenter.github.io%2Fsurveyform"
+              alt="">
+            <div>
+              <p>Survey Form</p>
+            </div>
           </a>
-          <a href="" target="_blank" class="project-tile">
-            <img src="" alt="">
-            <p></p>
+          <a href="https://techcarpenter.github.io/landingpage" target="_blank" class="project-tile">
+            <img
+              src="https://shrinktheweb.snapito.io/v2/webshot/spu-ea68c8-ogi2-3cwn3bmfojjlb56e?size=mc&screen=1024x768&url=http%3A%2F%2Ftechcarpenter.github.io%2Flandingpage"
+              alt="">
+            <div>
+              <p>Landing Page</p>
+            </div>
           </a>
-          <a href="" target="_blank" class="project-tile">
-            <img src="" alt="">
-            <p></p>
+          <a href="https://techcarpenter.github.io/technicaldocument" target="_blank" class="project-tile">
+            <img
+              src="https://shrinktheweb.snapito.io/v2/webshot/spu-ea68c8-ogi2-3cwn3bmfojjlb56e?size=mc&screen=1024x768&url=http%3A%2F%2Ftechcarpenter.github.io%2FTechnicalDocument"
+              alt="">
+            <div>
+              <p>Technical Documentation</p>
+            </div>
           </a>
         </div>
       </div>
     </section>
-    <section id="contact">
-
+    <section id="connect">
+      <div class="connect-container">
+        <a id="profile-link" href="https://github.com/techCarpenter" class="connect-link" target="_blank"><img
+            src="./media/github-icon.png" alt="" class="connect-icon" />Github</a>
+        <a href="https://twitter.com/briandevries95" class="connect-link" target="_blank"><img
+            src="./media/twitter-icon.png" alt="" class="connect-icon" />Twitter</a>
+        <a href="https://www.instagram.com/bdevries95/" class="connect-link" target="_blank"><img
+            src="./media/instagram-icon.png" alt="" class="connect-icon" />Instagram</a>
+      </div>
     </section>
   </main>
   <footer id="footer"></footer>
@@ -56,7 +79,7 @@
     --main-black: #363636;
     --main-white: #f5f5f5;
     --main-blue: #3123ff;
-    --main-orange: #45b681;
+    --main-green: #45b681;
   }
 
   /* ===== Attributes ===== */
@@ -112,7 +135,43 @@
     text-align: center;
   }
 
+  #connect {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
   /* ===== Classes ===== */
+  /* .connect-header {
+    margin-top: 30px;
+    color: var(--main-black);
+    text-align: center;
+  } */
+
+  .connect-icon {
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    margin: 5px;
+  }
+
+  .connect-container {
+    justify-self: center;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .connect-link {
+    color: var(--main-black);
+    transition: transform 0.3s ease-out;
+    margin: 20px;
+  }
+
+  .connect-container a:hover img {
+    transform: scale(1.1);
+  }
+
   .welcome-section-header {
     font-size: 72px;
   }
@@ -136,19 +195,45 @@
   }
 
   .project-container {
+    padding-top: 50px;
+    margin: auto;
     display: grid;
+    max-width: 1000px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 50px;
   }
 
   .project-tile {
+    border: solid 1px var(--main-white);
     width: 100%;
-    height: 300px;
+    height: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  a.project-tile:hover {
+    box-shadow: 6px 5px 6px 6px rgba(255, 255, 255, 0.19);
   }
 
   .project-tile img {
+    border: none;
+    margin: 0;
     width: 100%;
-    height: calc(100% - 30px);
+    height: calc(100% - 3rem);
+  }
+
+  .project-tile p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .project-tile div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 3rem;
+    padding: 0;
+    width: 100%;
   }
 
   .project-main {
@@ -156,6 +241,21 @@
   }
 
   /* ===== Media Queries ===== */
+  @media (max-width: 4in) {
+    .project-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @keyframes enlarge {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.5);
+    }
+  }
 </style>
 
 </html>
